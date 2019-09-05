@@ -1,0 +1,30 @@
+class Solution {
+public:
+    vector<string> fizzBuzz(int n) {
+
+        std::vector<string> a; 
+        
+        for (int c = 1; c <= n; c++) 
+        {
+            if (c%3==0 && c%5!=0) 
+			{
+                a.push_back("Fizz");
+     	    }
+        
+            else if (c%3!=0 && c%5==0) 
+			{
+                a.push_back("Buzz");
+            }
+            else if (c%3==0 && c%5==0) 
+			{
+                a.push_back("FizzBuzz");
+            }
+            else 
+			{
+                a.push_back(std::to_string(c));
+            }
+        }
+        
+        return a;
+}
+};
